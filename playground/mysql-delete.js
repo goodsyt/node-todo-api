@@ -18,6 +18,7 @@ sequelize
   .catch(err => {
     console.error('Unable to connect to the database:', err);
   });
+
 // var mysql = require('mysql2');
 
 // var pool = mysql.createPool({

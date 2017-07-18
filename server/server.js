@@ -17,9 +17,11 @@ app.post('/todos', (req, res) => {
   ).then((newTodo) =>{
     res.send(newTodo);
   }, (e) => {
-    res.send(e);
+    res.status(400).send(e);
   });
 });
 app.listen('3000', () => {
   console.log('Start server on port 3000');
 });
+
+module.exports = {app};
